@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['Green-Leafhopper', 'aphid', 'armyworm', 'beetle', 'grasshopper', 'sawfly']
+
+roboflow:
+  workspace: uet-taxila-x6wdk
+  project: pest-detection-v9gfo
+  version: 7
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/uet-taxila-x6wdk/pest-detection-v9gfo/dataset/7

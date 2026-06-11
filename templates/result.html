@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Crop Health Monitoring System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>🌱 AI Crop Health Monitoring System</h1>
+
+        <p>Pest Detection • Health Monitoring • Crop Analysis</p>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="image-section">
+
+            <h2>Uploaded Crop Image</h2>
+
+            <img src="{{ url_for('static',
+            filename='uploads/' + image) }}">
+
+        </div>
+
+
+        <!-- Pest Detection -->
+
+        <div class="section">
+
+            <h2>🐛 Pest Detection</h2>
+
+            <div class="card-grid">
+
+                <div class="card">
+
+                    <h3>Disease / Pest</h3>
+
+                    <p class="value">
+
+                        {{ result.prediction }}
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Confidence</h3>
+
+                    <p class="value">
+
+                        {{ result.confidence }}%
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Crop Health -->
+
+        <div class="section">
+
+            <h2>🌿 Crop Health Analysis</h2>
+
+            <div class="card-grid">
+
+                <div class="card">
+
+                    <h3>Green Leaf Area</h3>
+
+                    <p class="value">
+
+                        {{ result.green }}%
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Damaged Area</h3>
+
+                    <p class="value">
+
+                        {{ result.damage }}%
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Health Index</h3>
+
+                    <p class="value">
+
+                        {{ result.score }}/100
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Health Status</h3>
+
+                    <p class="value">
+
+                        {{ result.status }}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Health Monitoring -->
+
+        <div class="section">
+
+            <h2>📈 Health Monitoring</h2>
+
+            <div class="card-grid">
+
+                <div class="card">
+
+                    <h3>Severity</h3>
+
+                    <p class="value">
+
+                        {{ result.severity }}
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Pest Risk Index</h3>
+
+                    <p class="value">
+
+                        {{ result.risk }}
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Recovery Potential</h3>
+
+                    <p class="value">
+
+                        {{ result.recovery }}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Recommendation -->
+
+        <div class="recommendation">
+
+            <h2>💡 Recommendation</h2>
+
+            <p>
+
+                {{ result.recommendation }}
+
+            </p>
+
+        </div>
+
+
+        <div class="button-container">
+
+            <a href="/"
+               class="button">
+
+                Analyze Another Image
+
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

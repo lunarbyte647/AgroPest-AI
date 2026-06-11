@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AgroVision AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <div class="overlay">
+
+            <h1>🌱 AgroVision AI</h1>
+
+            <p>
+
+                Smart Crop Health Monitoring and Pest Detection System
+
+            </p>
+
+            <p>
+
+                Upload crop images or drone images for AI-powered analysis
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="upload-card">
+
+        <h2>Analyze Crop Image</h2>
+
+        <form action="/analyze"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <input type="file"
+                   name="image"
+                   accept="image/*"
+                   required>
+
+            <br><br>
+
+            <button type="submit">
+
+                🔍 Analyze Image
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature-box">
+
+            <h3>🐛 Pest Detection</h3>
+
+            <p>
+
+                Detect diseases and pests using AI.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature-box">
+
+            <h3>🌿 Crop Health</h3>
+
+            <p>
+
+                Monitor leaf damage and crop health.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature-box">
+
+            <h3>🚁 Drone Analysis</h3>
+
+            <p>
+
+                Analyze field images captured by drones.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
