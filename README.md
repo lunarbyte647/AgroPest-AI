@@ -42,6 +42,7 @@ Recommendations
 - Real-time pest detection
 - IoT integration
 - NDVI-based crop monitoring
+**Note:** Datasets are not included in this repository due to size limitations.
 
 ## Developed By
 
